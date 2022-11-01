@@ -7,8 +7,8 @@ group = 'de.MarkusTieger.tiger-os'
 archivesBaseName = 'repository'
 version = '1.0.0'
 
-sourceCompatibility = 11
-targetCompatibility = 11
+sourceCompatibility = 17
+targetCompatibility = 17
 
 repositories {
     mavenCentral() 
@@ -23,6 +23,10 @@ dependencies {
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
 	
 	implementation 'com.google.code.gson:gson:2.9.1'
+    
+    // https://mvnrepository.com/artifact/org.kohsuke/github-api
+	implementation 'org.kohsuke:github-api:1.313'
+    
     
 }
 

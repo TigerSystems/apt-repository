@@ -1,3 +1,30 @@
+Package: bottom
+Version: 0.6.8
+Architecture: amd64
+Vcs-Browser: https://github.com/ClementTsang/bottom
+Vcs-Git: https://github.com/ClementTsang/bottom
+Homepage: https://clementtsang.github.io/bottom/stable
+Maintainer: Clement Tsang <cjhtsang@uwaterloo.ca>
+Installed-Size: 5924
+Depends: libc6 (>= 2.18)
+Priority: optional
+Section: utility
+Filename: pool/main/b/bottom/bottom_0.6.8_amd64.deb
+Size: 1519352
+SHA256: 44f876da117ba8091f8fd7b45a99a30bec47b6b2fec487a6c1f45770633632da
+SHA1: 1e165b765962784cd37c74c127996f9276e87d3c
+MD5sum: 45feb8ef65e27300eafde63081b6bb71
+Description: A customizable cross-platform graphical process/system monitor for the
+ terminal. Supports Linux, macOS, and Windows.
+ A customizable cross-platform graphical process/system monitor for the
+ terminal. Supports Linux, macOS, and Windows.
+ .
+ By default, bottom will look for a config file in ~/.config/bottom/bottom.toml.
+ If one is not specified it will fall back to defaults.  If a config file does
+ not
+ exist at the specified or default location, a blank one will be created for the
+ user.
+
 Package: discord
 Version: 0.0.21
 Depends: libc6, libasound2, libatomic1, libgconf-2-4, libnotify4, libnspr4, libnss3, libstdc++6, libxss1, libxtst6, libc++1

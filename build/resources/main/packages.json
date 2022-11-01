@@ -13,6 +13,7 @@
 		{
 			"group": "ClementTsang",
 			"identifier": "bottom",
+			"contains": "amd64.deb",
 			"section": "utility",
 			"priority": "optional"
 		}

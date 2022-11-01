@@ -11,11 +11,17 @@ import java.util.Map.Entry;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.kohsuke.github.GHAsset;
+import org.kohsuke.github.GHRelease;
+import org.kohsuke.github.GHRepository;
+import org.kohsuke.github.GitHub;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 
 import de.MarkusTieger.obj.AdditionalObj;
+import de.MarkusTieger.obj.GithubIdentifierObj;
 import de.MarkusTieger.obj.PackagesObj;
 
 public class Repository {
@@ -33,6 +39,24 @@ public class Repository {
 		
 		File tmp = new File("tmp");
 		if(!tmp.exists()) tmp.mkdirs();
+		
+		System.out.println("Connecting to Github...");
+		
+		GitHub github = GitHub.connectAnonymously();
+		
+		for(GithubIdentifierObj identifier : obj.github) {
+			
+			GHRepository repo = github.getRepository(identifier.group + "/" + identifier.identifier);
+			GHRelease release = repo.getLatestRelease();
+			for(GHAsset asset : release.listAssets()) {
+				if(asset.getName().toLowerCase().contains(identifier.contains)) {
+					System.out.println("Adding " + asset.getName() + " from " + identifier.group + "/" + identifier.identifier + " to download list.");
+					obj.direct.put(asset.getBrowserDownloadUrl(), identifier);
+					System.out.println("Finished current.");
+					System.out.println();
+				}
+			}
+		}
 		
 		for(Entry<String, AdditionalObj> e : obj.direct.entrySet()) {
 			String d = e.getKey();

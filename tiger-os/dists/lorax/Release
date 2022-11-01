@@ -1,36 +1,27 @@
 Origin: Tigersystems
 Label: Tiger-OS
 Codename: lorax
-Date: Tue, 01 Nov 2022 16:54:34 UTC
-Architectures: i386 amd64
+Date: Tue, 01 Nov 2022 17:17:23 UTC
+Architectures: amd64
 Components: main
 Description: The Official Tiger-OS Repository
 MD5Sum:
- d41d8cd98f00b204e9800998ecf8427e 0 main/binary-i386/Packages
- 7029066c27ac6f5ef18d660d5741979a 20 main/binary-i386/Packages.gz
- 4db8820ecc92607fa8e679ef7d0289f7 118 main/binary-i386/Release
- 43b51fc9c358d6ffff22ff43f76e8d79 2265 main/binary-amd64/Packages
- 9274a3224d74cbec5a8bda744c1f2e9d 1139 main/binary-amd64/Packages.gz
+ 752a46cd80f6a15dd5edbea8954acee2 3337 main/binary-amd64/Packages
+ 2ec7dda1e5d0aa959a23caaf695a551e 1585 main/binary-amd64/Packages.gz
  d60bbf5c337f7c7f5c7b629e9f5a7d32 119 main/binary-amd64/Release
  d41d8cd98f00b204e9800998ecf8427e 0 main/source/Sources
  7029066c27ac6f5ef18d660d5741979a 20 main/source/Sources.gz
  44de3af8c151ae882e512c1f42d52227 120 main/source/Release
 SHA1:
- da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-i386/Packages
- 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-i386/Packages.gz
- 6c4e8eb2f8d5a4cccf4f2216d66d3cb409aa9b19 118 main/binary-i386/Release
- 09dd4fcd0bd3943715db535f80231f3251a3ab0f 2265 main/binary-amd64/Packages
- 1e1dfe6d3b22cc512ddd9a1b94bf3656460d9459 1139 main/binary-amd64/Packages.gz
+ 0d7ff19e4f23a25b96d2a6ed28d13c452a99ee04 3337 main/binary-amd64/Packages
+ 7fa420fcddbfeecc2133078e40ddb4dc9202016a 1585 main/binary-amd64/Packages.gz
  3e6e6402979aac70ab24a0584b00334de7b2ccda 119 main/binary-amd64/Release
  da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/source/Sources
  46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/source/Sources.gz
  7cb3661fb4bd91c46ae292457ee2a41d6c4e03d9 120 main/source/Release
 SHA256:
- e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-i386/Packages
- 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-i386/Packages.gz
- 7c6e069f31040498df9e9e737a560e0da85f0e595baadd629e8df545a13f13cf 118 main/binary-i386/Release
- fb11c5324abc29dd1b5e7a47fd7de598b7608238ca1bc5df1afba5a93e255f59 2265 main/binary-amd64/Packages
- 9f24d966d76e49d6b52f90ccdcbbffcd0726e22590354e93075423a7210db05b 1139 main/binary-amd64/Packages.gz
+ 63b9e3f979579cddc2d3004c652dd065bc9dd745a50a5a10f79f1af944226612 3337 main/binary-amd64/Packages
+ df7bcebe2334028ca8e3edef8b0d61fbd1b05d4c99972a8e1c6ad703193e144c 1585 main/binary-amd64/Packages.gz
  34e11fe87ec27e226d778eb099ba1c17d51fb6b615c804d5c5fb48eb09cd307c 119 main/binary-amd64/Release
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/source/Sources
  59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/source/Sources.gz
