@@ -55,10 +55,9 @@ public class Repository {
 	}
 
 	private static void installDeb(File target) throws IOException, InterruptedException {
-		ProcessBuilder builder = new ProcessBuilder("screen", "-S", UUID.randomUUID().toString(), "reprepro", "-C", "main", "includedeb", System.getProperty("code-name"), target.getAbsolutePath());
+		ProcessBuilder builder = new ProcessBuilder("reprepro", "-C", "main", "includedeb", System.getProperty("code-name"), target.getAbsolutePath());
 		builder.directory(new File("tiger-os"));
-		builder.redirectError(Redirect.INHERIT);
-		builder.redirectOutput(Redirect.INHERIT);
+		builder.inheritIO();
 		Process p = builder.start();
 		int exit = p.waitFor();
 		if(exit != 0) throw new RuntimeException("Exit Code is not zero: " + exit);
