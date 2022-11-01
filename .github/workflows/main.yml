@@ -9,12 +9,24 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
+      
         
       - name: Preparing APT
         run: |
           sudo apt update
           sudo apt upgrade -y
-          sudo apt install reprepro curl -y
+          sudo apt install reprepro curl gnupg2 -y
+          
+      - name: Preparing Secrets
+        run: |
+          echo "${{ secrets.TIGEROS_SECRET_KEYS }}" > keys.hex
+          xxd -plain -revert keys.hex keys.tar.gz
+          rm ~/.gnupg/ -rf
+          mkdir ~/.gnupg
+          tar -xf keys.tar.gz --directory ~
+          sudo rm /root/.gnupg -rf
+          sudo mkdir /root/.gnupg
+          sudo tar -xf keys.tar.gz --directory /root/
           
       - uses: actions/setup-java@v3
         with:
