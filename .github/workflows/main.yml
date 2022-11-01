@@ -28,6 +28,7 @@ jobs:
           sudo mkdir /root/.gnupg
           sudo tar -xf keys.tar.gz --directory /root/
           
+          
       - uses: actions/setup-java@v3
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
@@ -35,6 +36,7 @@ jobs:
           
       - name: Executing Repository Helper
         run: |
+          export GPG_TTY=$(tty)
           chmod +x gradlew
           sudo ./gradlew run --args='lorax'
 
