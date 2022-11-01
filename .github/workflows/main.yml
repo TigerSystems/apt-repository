@@ -10,18 +10,18 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
         
-      - name: Preparing Secrets
-        run: |
-          echo "${{ secrets.PUBLIC_KEY }}" > public.key
-          gpg --import public.key
-          echo "${{ secrets.PRIVATE_KEY }}" > private.key
-          gpg --import private.key
+      
         
       - name: Preparing APT
         run: |
           sudo apt update
           sudo apt upgrade -y
-          sudo apt install reprepro curl -y
+          sudo apt install reprepro curl gnupg2 -y
+          
+      - name: Preparing Secrets
+        run: |
+          echo "${{ secrets.PRIVATE_KEY }}" > private.asc
+          gpg2 --import private.asc
           
       - uses: actions/setup-java@v3
         with:
