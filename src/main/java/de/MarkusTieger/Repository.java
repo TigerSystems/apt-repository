@@ -52,6 +52,13 @@ public class Repository {
 			System.out.println();
 		}
 		
+		
+		ProcessBuilder builder = new ProcessBuilder("rm", "-rf", tmp.getAbsolutePath());
+		Process p = builder.start();
+		int exit = p.waitFor();
+		if(exit != 0) throw new RuntimeException("Exit Code is not zero: " + exit);
+		if(tmp.exists()) throw new RuntimeException("Temp. Folder does exists.");
+		
 	}
 
 	private static void installDeb(File target) throws IOException, InterruptedException {
