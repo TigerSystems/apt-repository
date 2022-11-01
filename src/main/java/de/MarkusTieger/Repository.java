@@ -3,13 +3,10 @@ package de.MarkusTieger;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.ProcessBuilder.Redirect;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.Map.Entry;
 import java.util.UUID;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import org.kohsuke.github.GHAsset;
 import org.kohsuke.github.GHRelease;
@@ -18,7 +15,6 @@ import org.kohsuke.github.GitHub;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
 
 import de.MarkusTieger.obj.AdditionalObj;
 import de.MarkusTieger.obj.GithubIdentifierObj;
