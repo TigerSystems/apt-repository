@@ -38,8 +38,7 @@ jobs:
         run: |
           export GPG_TTY=$(tty)
           chmod +x gradlew
-          script /dev/null
-          sudo ./gradlew run --args='lorax'
+          script /dev/null && sudo ./gradlew run --args='lorax'
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
