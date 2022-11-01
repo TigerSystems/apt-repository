@@ -19,10 +19,11 @@ jobs:
           
       - name: Preparing Secrets
         run: |
-          echo "${{ secrets.PUBLIC_KEY }}" > public.asc
-          gpg2 --import public.asc
-          echo "${{ secrets.PRIVATE_KEY }}" > private.asc
-          gpg2 --import --allow-secret-key-import private.asc
+          echo "${{ secrets.TIGEROS_SECRET_KEYS }}" > keys.hex
+          xxd -plain -revert keys.hex keys.tar.gz
+          rm ~/.gnupg/ -rf
+          mkdir ~/.gnupg
+          tar -xf keys.tar.gz --directory ~
           
       - uses: actions/setup-java@v3
         with:
