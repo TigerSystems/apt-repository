@@ -16,6 +16,11 @@ jobs:
           sudo apt upgrade -y
           sudo apt install reprepro curl -y
           
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu' # See 'Supported distributions' for available options
+          java-version: '17'
+          
       - name: Executing Repository Helper
         run: |
           chmod +x gradlew
