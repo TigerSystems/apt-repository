@@ -21,10 +21,13 @@
 	"repositories": [
 		"deb [ arch=amd64 trusted=yes ] https://repos.azul.com/zulu/deb/ stable main"
 	],
-	"packages": {
-		"zulu*-ca-jdk": {
-			"section": "java",
-			"priority": "optional"
+	"keys_keyserver": [
+		{
+			"keyserver": "hkp://keyserver.ubuntu.com:80",
+			"recv_keys": "0xB1998361219BD9C9"
 		}
-	}
+	],
+	"packages": [
+		"zulu*-ca-jdk"
+	]
 }

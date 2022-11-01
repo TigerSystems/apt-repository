@@ -1,3 +1,50 @@
+Package: alsa-topology-conf
+Version: 1.2.5.1-2
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
+Installed-Size: 420
+Enhances: libasound2-data
+Breaks: libasound2-data (<< 1.2.1)
+Replaces: libasound2-data (<< 1.2.1)
+Multi-Arch: foreign
+Homepage: https://www.alsa-project.org/
+Priority: optional
+Section: libs
+Filename: pool/main/a/alsa-topology-conf/alsa-topology-conf_1.2.5.1-2_all.deb
+Size: 15542
+SHA256: e5109a16bd0aa0eb08a8d0e3862d7f2f223cce0741cf4167eb56fafcc7ba8f35
+SHA1: 28bbb456e0ee25d77512d079505b94086507fe8b
+MD5sum: ac951cc5419ff9c9ed8ab2f0cdcbebb6
+Description: ALSA topology configuration files
+ This package contains ALSA topology configuration files that can be used
+ by libasound2 for specific audio hardware.
+ .
+ ALSA is the Advanced Linux Sound Architecture.
+
+Package: alsa-ucm-conf
+Version: 1.2.6.3-1ubuntu1.1
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 553
+Depends: libasound2 (>= 1.2.4)
+Multi-Arch: foreign
+Homepage: https://www.alsa-project.org/
+Priority: optional
+Section: libs
+Filename: pool/main/a/alsa-ucm-conf/alsa-ucm-conf_1.2.6.3-1ubuntu1.1_all.deb
+Size: 41148
+SHA256: 9e66a5c632c73b657c18544b8c6f2d173e926f0e882680c215ebc01fe77be563
+SHA1: 0d07f0643009bd12f44bbd8e71446914c6a4060a
+MD5sum: 0c1ecf54a1cfd512c76ae81fdce1dadc
+Description: ALSA Use Case Manager configuration files
+ This package contains ALSA Use Case Manager configuration of audio
+ input/output names and routing for specific audio hardware. They can be
+ used with the alsaucm tool.
+ .
+ ALSA is the Advanced Linux Sound Architecture.
+Original-Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
+
 Package: bottom
 Version: 0.6.8
 Architecture: amd64
@@ -44,6 +91,552 @@ Description: Chat for Communities and Friends
  Discord is the easiest way to communicate over voice, video, and text. Chat,
  hang out, and stay close with your friends and communities.
 
+Package: fontconfig-config
+Source: fontconfig
+Version: 2.13.1-4.2ubuntu5
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 172
+Depends: ucf (>= 0.29), fonts-dejavu-core | ttf-bitstream-vera | fonts-liberation | fonts-liberation2 | fonts-croscore | fonts-freefont-otf | fonts-freefont-ttf | fonts-urw-base35 | fonts-texgyre
+Breaks: libfontconfig1 (<< 2.13.0)
+Multi-Arch: foreign
+Homepage: https://www.freedesktop.org/wiki/Software/fontconfig/
+Priority: optional
+Section: fonts
+Filename: pool/main/f/fontconfig/fontconfig-config_2.13.1-4.2ubuntu5_all.deb
+Size: 29096
+SHA256: c40405fa036d1732e269fabd4c5b40076b973a226da1df6921d4b7e7a1e2ff72
+SHA1: 6ca3d8b5f3402dc55f0394b80d2ff94df696634f
+MD5sum: cb0642b846aa8a3a65a75c854ca043b7
+Description: generic font configuration library - configuration
+ Fontconfig is a font configuration and customization library, which
+ does not depend on the X Window System. It is designed to locate
+ fonts within the system and select them according to requirements
+ specified by applications.
+ .
+ This package contains the configuration files and scripts for fontconfig.
+Original-Maintainer: Debian freedesktop.org maintainers <pkg-freedesktop-maintainers@lists.alioth.debian.org>
+
+Package: fonts-dejavu-core
+Source: fonts-dejavu
+Version: 2.37-2build1
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Fonts Task Force <debian-fonts@lists.debian.org>
+Installed-Size: 2954
+Multi-Arch: foreign
+Homepage: https://dejavu-fonts.github.io/
+Priority: optional
+Section: fonts
+Filename: pool/main/f/fonts-dejavu/fonts-dejavu-core_2.37-2build1_all.deb
+Size: 1041300
+SHA256: c33fe8bf33b50d99d6448804a090123b1bbba37d7a8703c630695676d110a47d
+SHA1: 3c8801a72016a068df4d7374b3bfb2cb039408fd
+MD5sum: 613b49540f3ffdc7dcda4ddc96f35323
+Description: Vera font family derivate with additional characters
+ DejaVu provides an expanded version of the Vera font family aiming for
+ quality and broader Unicode coverage while retaining the original Vera
+ style. DejaVu currently works towards conformance with the Multilingual
+ European Standards (MES-1 and MES-2) for Unicode coverage. The DejaVu
+ fonts provide serif, sans and monospaced variants.
+ .
+ This package only contains the sans, sans-bold, serif, serif-bold,
+ mono and mono-bold variants. For additional variants, see the
+ fonts-dejavu-extra package.
+ .
+ DejaVu fonts are intended for use on low-resolution devices (mainly
+ computer screens) but can be used in printing as well.
+
+Package: java-common
+Version: 0.72build2
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 37
+Suggests: default-jre
+Multi-Arch: foreign
+Homepage: https://wiki.debian.org/Java/
+Priority: optional
+Section: java
+Filename: pool/main/j/java-common/java-common_0.72build2_all.deb
+Size: 6782
+SHA256: 6f9e162a780359dc0c04770c24b3ed884b37b0a5038fe387c8a2cc8e9e1d37b8
+SHA1: 0f71d65023080489990a4ff28d6d31f35bfc639e
+MD5sum: bc37054db74f8ba5a0566c2e2ed25416
+Description: Base package for Java runtimes
+ This package provides common tools for the Java runtimes, such as
+ the update-java-alternatives mechanism used to switch between
+ different versions of Java.
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+
+Package: libasound2
+Source: alsa-lib
+Version: 1.2.6.1-1ubuntu1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 1154
+Depends: libasound2-data (>= 1.2.6.1-1ubuntu1), libc6 (>= 2.34)
+Suggests: libasound2-plugins (>= 1.0.24)
+Breaks: alsa-utils (<< 1.2.1)
+Multi-Arch: same
+Homepage: https://www.alsa-project.org/
+Priority: optional
+Section: libs
+Filename: pool/main/a/alsa-lib/libasound2_1.2.6.1-1ubuntu1_amd64.deb
+Size: 389902
+SHA256: cb208a762817bde5b83d1d52b7b89c747e9b484c857ea114bf97bacc1b29ecae
+SHA1: 6017a17404c71265b02a5439cc4532709f4a3f5d
+MD5sum: ca70d38576d287809a8cce1ad2745378
+Description: shared library for ALSA applications
+ This package contains the ALSA library and its standard plugins, as well
+ as the required configuration files.
+ .
+ ALSA is the Advanced Linux Sound Architecture.
+Original-Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
+
+Package: libasound2-data
+Source: alsa-lib
+Version: 1.2.6.1-1ubuntu1
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 217
+Recommends: alsa-ucm-conf, alsa-topology-conf
+Suggests: alsa-utils
+Breaks: libasound2 (<< 1.2.6.1-1ubuntu1)
+Replaces: libasound2 (<< 1.2.6.1-1ubuntu1)
+Multi-Arch: foreign
+Homepage: https://www.alsa-project.org/
+Priority: optional
+Section: libs
+Filename: pool/main/a/alsa-lib/libasound2-data_1.2.6.1-1ubuntu1_all.deb
+Size: 19120
+SHA256: 53298d54c1b904ae0d28ef7e734844abcf134b58096bb0d079870bba20410880
+SHA1: 35ec83ffebd1f9f1a4ee28f970ea2a70f75dc0f1
+MD5sum: 9c718d7f04fd681117bd618ff6b81715
+Description: Configuration files and profiles for ALSA drivers
+ This package contains configuration files for ALSA drivers.
+ .
+ ALSA is the Advanced Linux Sound Architecture.
+Original-Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
+
+Package: libbsd0
+Source: libbsd
+Version: 0.11.5-1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Guillem Jover <guillem@debian.org>
+Installed-Size: 136
+Depends: libc6 (>= 2.33), libmd0 (>= 1.0.3-2)
+Multi-Arch: same
+Homepage: https://libbsd.freedesktop.org/
+Priority: optional
+Section: libs
+Filename: pool/main/libb/libbsd/libbsd0_0.11.5-1_amd64.deb
+Size: 44760
+SHA256: 09367acdf59f28ffb71ba7bc36c516cff03b2765930cf9be7bb7ea7273e4c312
+SHA1: 212b3bb509f8489ca5ca7dd491d1b193fed80c93
+MD5sum: f03ae485700c47d726d9a8a717e15e2f
+Description: utility functions from BSD systems - shared library
+ This library provides some C functions such as strlcpy() that are commonly
+ available on BSD systems but not on others like GNU systems.
+ .
+ For a detailed list of the provided functions, please see the libbsd-dev
+ package description.
+
+Package: libfontconfig1
+Source: fontconfig
+Version: 2.13.1-4.2ubuntu5
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 331
+Depends: libc6 (>= 2.33), libexpat1 (>= 2.0.1), libfreetype6 (>= 2.9.1), libuuid1 (>= 2.16), fontconfig-config (>= 2.13.1-4.2ubuntu5)
+Breaks: xpdf (<= 3.03-11)
+Provides: libfontconfig
+Multi-Arch: same
+Homepage: https://www.freedesktop.org/wiki/Software/fontconfig/
+Priority: optional
+Section: libs
+Filename: pool/main/f/fontconfig/libfontconfig1_2.13.1-4.2ubuntu5_amd64.deb
+Size: 131434
+SHA256: 6be0c141aed23d9eb801658d248fd667bea2b8a9ccab4db7b596a69ffe3393fd
+SHA1: f4e8ed8844b6c882631657f04ad64355dd2bee5c
+MD5sum: ee3a2cc8fb1b9417a90f4b2c971a872a
+Description: generic font configuration library - runtime
+ Fontconfig is a font configuration and customization library, which
+ does not depend on the X Window System. It is designed to locate
+ fonts within the system and select them according to requirements
+ specified by applications.
+ .
+ This package contains the runtime library needed to launch applications
+ using fontconfig.
+Original-Maintainer: Debian freedesktop.org maintainers <pkg-freedesktop-maintainers@lists.alioth.debian.org>
+
+Package: libfreetype6
+Source: freetype
+Version: 2.11.1+dfsg-1ubuntu0.1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 870
+Depends: libbrotli1 (>= 0.6.0), libc6 (>= 2.33), libpng16-16 (>= 1.6.2-1), zlib1g (>= 1:1.1.4)
+Multi-Arch: same
+Homepage: https://www.freetype.org
+Priority: optional
+Section: libs
+Filename: pool/main/f/freetype/libfreetype6_2.11.1+dfsg-1ubuntu0.1_amd64.deb
+Size: 388920
+SHA256: 86b7a0285fb61e9a90f468e452d239a6b8f32077d274c26a12cbf00cb42048e9
+SHA1: 4ec06967b5a2d70f5d7eb267b37cb5b410c65567
+MD5sum: 15c60c2abfd7ebbeb0e2b2339f6cc5b3
+Description: FreeType 2 font engine, shared library files
+ The FreeType project is a team of volunteers who develop free,
+ portable and high-quality software solutions for digital typography.
+ They specifically target embedded systems and focus on providing small,
+ efficient and ubiquitous products.
+ .
+ The FreeType 2 library is their new software font engine.  It has been
+ designed to provide the following important features:
+  * A universal and simple API to manage font files
+  * Support for several font formats through loadable modules
+  * High-quality anti-aliasing
+  * High portability & performance
+ .
+ Supported font formats include:
+  * TrueType files (.ttf) and collections (.ttc)
+  * Type 1 font files both in ASCII (.pfa) or binary (.pfb) format
+  * Type 1 Multiple Master fonts.  The FreeType 2 API also provides
+    routines to manage design instances easily
+  * Type 1 CID-keyed fonts
+  * OpenType/CFF (.otf) fonts
+  * CFF/Type 2 fonts
+  * Adobe CEF fonts (.cef), used to embed fonts in SVG documents with
+    the Adobe SVG viewer plugin.
+  * Windows FNT/FON bitmap fonts
+ .
+ This package contains the files needed to run programs that use the
+ FreeType 2 library.
+Original-Maintainer: Hugh McMaster <hugh.mcmaster@outlook.com>
+
+Package: libmd0
+Source: libmd
+Version: 1.0.4-1build1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 71
+Depends: libc6 (>= 2.33)
+Multi-Arch: same
+Homepage: https://www.hadrons.org/software/libmd/
+Priority: optional
+Section: libs
+Filename: pool/main/libm/libmd/libmd0_1.0.4-1build1_amd64.deb
+Size: 22964
+SHA256: bcdad5e400aeb660f0337a1c5c1a77e3effa91d0803e64ce2d000e9006f67cdb
+SHA1: 3f75efb63d4261cb7be40bfd35883b6583e652dc
+MD5sum: 2f268d57c9decda69da2e09a5ee6823d
+Description: message digest functions from BSD systems - shared library
+ The libmd library provides various message digest ("hash") functions,
+ as found on various BSDs on a library with the same name and with a
+ compatible API.
+Original-Maintainer: Guillem Jover <guillem@debian.org>
+
+Package: libpng16-16
+Source: libpng1.6
+Version: 1.6.37-3build5
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 353
+Depends: libc6 (>= 2.29), zlib1g (>= 1:1.2.11)
+Multi-Arch: same
+Homepage: http://libpng.org/pub/png/libpng.html
+Priority: optional
+Section: libs
+Filename: pool/main/libp/libpng1.6/libpng16-16_1.6.37-3build5_amd64.deb
+Size: 191126
+SHA256: 154bbc6b1bfbe4c2753ec15838896ecc16be62c4b42b31e35aa9551284791fc0
+SHA1: 014ca20f28583f4a4eff1bf682647ab78b9d168b
+MD5sum: 619d161bb7bb78248d301e0c02a8a280
+Description: PNG library - runtime (version 1.6)
+ libpng is a library implementing an interface for reading and writing
+ PNG (Portable Network Graphics) format files.
+ .
+ This package contains the runtime library files needed to run software
+ using libpng.
+Original-Maintainer: Maintainers of libpng1.6 packages <libpng1.6@packages.debian.org>
+
+Package: libx11-6
+Source: libx11
+Version: 2:1.7.5-1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 1386
+Depends: libc6 (>= 2.34), libxcb1 (>= 1.11.1), libx11-data
+Breaks: libx11-xcb1 (<< 2:1.7.0-2)
+Multi-Arch: same
+Priority: optional
+Section: libs
+Filename: pool/main/libx/libx11/libx11-6_1.7.5-1_amd64.deb
+Size: 666288
+SHA256: 027e5e6c748c9a826125df013284caa78ca04213aba1967cd8c8067165e58020
+SHA1: 6dd2982c972f621bb74118d6f32c6ee774fc33bd
+MD5sum: d5525bd8ce6279c782e0594ac3cacf23
+Description: X11 client-side library
+ This package provides a client interface to the X Window System, otherwise
+ known as 'Xlib'.  It provides a complete API for the basic functions of the
+ window system.
+ .
+ More information about X.Org can be found at:
+ <URL:https://www.X.org>
+ .
+ This module can be found at
+ https://gitlab.freedesktop.org/xorg/lib/libX11
+
+Package: libx11-data
+Source: libx11
+Version: 2:1.7.5-1
+Architecture: all
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 1429
+Breaks: libx11-6 (<< 2:1.4.1)
+Multi-Arch: foreign
+Priority: optional
+Section: x11
+Filename: pool/main/libx/libx11/libx11-data_1.7.5-1_all.deb
+Size: 119356
+SHA256: d24d7c084b50b93e914ec53cfd74dddc2207331e027d6e7ac7fb1491473ccc97
+SHA1: 54d146445af1f0ad8c6ebabf337535168fdfb328
+MD5sum: 7177c1c72ecbcb3066632c17c89e54b4
+Description: X11 client-side library
+ This package provides the locale data files for libx11.
+ .
+ More information about X.Org can be found at:
+ <URL:https://www.X.org>
+ .
+ This module can be found at
+ https://gitlab.freedesktop.org/xorg/lib/libX11
+
+Package: libxau6
+Source: libxau
+Version: 1:1.0.9-1build5
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 35
+Depends: libc6 (>= 2.33)
+Multi-Arch: same
+Priority: optional
+Section: libs
+Filename: pool/main/libx/libxau/libxau6_1.0.9-1build5_amd64.deb
+Size: 7634
+SHA256: 551fa4101394af894f5f401285eeca9756da94bb31ecb08ed36a549ec580cd10
+SHA1: 6a7756d7c519adf3a066eff799d3773ce8349774
+MD5sum: e59261a4a3ec2dbdb2e8f9456d9e13ca
+Description: X11 authorisation library
+ This package provides the main interface to the X11 authorisation handling,
+ which controls authorisation for X connections, both client-side and
+ server-side.
+ .
+ More information about X.Org can be found at:
+ <URL:https://www.X.org>
+ .
+ This module can be found at
+ https://gitlab.freedesktop.org/xorg/lib/libxau
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+
+Package: libxcb1
+Source: libxcb
+Version: 1.14-3ubuntu3
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 206
+Depends: libc6 (>= 2.14), libxau6 (>= 1:1.0.9), libxdmcp6
+Breaks: alsa-utils (<< 1.0.24.2-5)
+Multi-Arch: same
+Homepage: https://xcb.freedesktop.org
+Priority: optional
+Section: libs
+Filename: pool/main/libx/libxcb/libxcb1_1.14-3ubuntu3_amd64.deb
+Size: 49030
+SHA256: 9258f04136434e7a0ccd76041505421934284209693373cfa9c24acb3a641ec5
+SHA1: 61593536c9406538b6ac07eda4aacca60f674bc3
+MD5sum: 78c155bcfc33edf01a06bd26d952926e
+Description: X C Binding
+ This package contains the library files needed to run software using libxcb,
+ the X C Binding.
+ .
+ The XCB library provides an interface to the X Window System protocol,
+ designed to replace the Xlib interface.  XCB provides several advantages over
+ Xlib:
+ .
+  * Size: small library and lower memory footprint
+  * Latency hiding: batch several requests and wait for the replies later
+  * Direct protocol access: one-to-one mapping between interface and protocol
+  * Thread support: access XCB from multiple threads, with no explicit locking
+  * Easy creation of new extensions: automatically generates interface from
+    machine-parsable protocol descriptions
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+
+Package: libxdmcp6
+Source: libxdmcp
+Version: 1:1.1.3-0ubuntu5
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 43
+Depends: libbsd0 (>= 0.2.0), libc6 (>= 2.4)
+Multi-Arch: same
+Priority: optional
+Section: libs
+Filename: pool/main/libx/libxdmcp/libxdmcp6_1.1.3-0ubuntu5_amd64.deb
+Size: 10904
+SHA256: 6f6c869dcfc072fa77d24b72ba127bdf15d606bdffbeba4314fb39f4f324363d
+SHA1: 80038a3bdbfb9a1ae16e2cb74892167d91e6b88a
+MD5sum: be674db435037b207d0c1615f9c3f969
+Description: X11 Display Manager Control Protocol library
+ This package provides the main interface to the X11 display manager control
+ protocol library, which allows for remote logins to display managers.
+ .
+ More information about X.Org can be found at:
+ <URL:http://www.X.org>
+ .
+ This module can be found at
+ git://anongit.freedesktop.org/git/xorg/lib/libXdmcp
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+
+Package: libxext6
+Source: libxext
+Version: 2:1.3.4-1build1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 110
+Depends: libc6 (>= 2.14), libx11-6 (>= 2:1.6.0)
+Multi-Arch: same
+Priority: optional
+Section: libs
+Filename: pool/main/libx/libxext/libxext6_1.3.4-1build1_amd64.deb
+Size: 31808
+SHA256: 875ec849749511dff61c8cc5a775f6f93427b9c3f392fdcec6925f14428e89cd
+SHA1: 4e96305377f41139ad2d6dd309c141d6b14aabb1
+MD5sum: d8be85f211d3508166f9a2b7ab3b0e05
+Description: X11 miscellaneous extension library
+ libXext provides an X Window System client interface to several extensions to
+ the X protocol.
+ .
+ The supported protocol extensions are:
+  - DOUBLE-BUFFER (DBE), the Double Buffer extension;
+  - DPMS, the VESA Display Power Management System extension;
+  - Extended-Visual-Information (EVI), an extension for gathering extra
+    information about the X server's visuals;
+  - LBX, the Low Bandwidth X extension;
+  - MIT-SHM, the MIT X client/server shared memory extension;
+  - MIT-SUNDRY-NONSTANDARD, a miscellaneous extension by MIT;
+  - Multi-Buffering, the multi-buffering and stereo display extension;
+  - SECURITY, the X security extension;
+  - SHAPE, the non-rectangular shaped window extension;
+  - SYNC, the X synchronization extension;
+  - TOG-CUP, the Open Group's Colormap Utilization extension;
+  - XC-APPGROUP, the X Consortium's Application Group extension;
+  - XC-MISC, the X Consortium's resource ID querying extension;
+  - XTEST, the X test extension (this is one of two client-side
+    implementations; the other is in the libXtst library, provided by the
+    libxtst6 package);
+ .
+ libXext also provides a small set of utility functions to aid authors of
+ client APIs for X protocol extensions.
+ .
+ More information about X.Org can be found at:
+ <URL:http://www.X.org>
+ .
+ This module can be found at
+ git://anongit.freedesktop.org/git/xorg/lib/libXext
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+
+Package: libxi6
+Source: libxi
+Version: 2:1.8-1build1
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 100
+Depends: libc6 (>= 2.14), libx11-6 (>= 2:1.6.0), libxext6
+Multi-Arch: same
+Homepage: https://www.x.org/
+Priority: optional
+Section: libs
+Filename: pool/main/libx/libxi/libxi6_1.8-1build1_amd64.deb
+Size: 32572
+SHA256: 47662736cca4be456fd42a5f0a9d3bed8a5cfad4ee08b809a95dde6004daf275
+SHA1: b2e6f5e6ed07dd2d8a73635c1a25fd333bbf728f
+MD5sum: 5bd2b52971deee524e66fb3fc445fb0a
+Description: X11 Input extension library
+ libXi provides an X Window System client interface to the XINPUT
+ extension to the X protocol.
+ .
+ The Input extension allows setup and configuration of multiple input devices,
+ and hotplugging of input devices (to be added and removed on the fly).
+ .
+ More information about X.Org can be found at:
+ <URL:https://www.X.org>
+ .
+ This module can be found at
+ git://anongit.freedesktop.org/git/xorg/lib/libXi
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+
+Package: libxrender1
+Source: libxrender
+Version: 1:0.9.10-1build4
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 68
+Depends: libc6 (>= 2.14), libx11-6 (>= 2:1.6.0)
+Multi-Arch: same
+Priority: optional
+Section: libs
+Filename: pool/main/libx/libxrender/libxrender1_0.9.10-1build4_amd64.deb
+Size: 19678
+SHA256: a68f6db4320b5963dd499b83b6cc8c7b5cd39b05e84862d5945da9244e4c96d6
+SHA1: 59d3875e1b39799e6f08ca2553f7fdb84509747a
+MD5sum: ee08272c6fc54e890f83edcce5216376
+Description: X Rendering Extension client library
+ The X Rendering Extension (Render) introduces digital image composition as
+ the foundation of a new rendering model within the X Window System.
+ Rendering geometric figures is accomplished by client-side tessellation into
+ either triangles or trapezoids.  Text is drawn by loading glyphs into the
+ server and rendering sets of them.  The Xrender library exposes this
+ extension to X clients.
+ .
+ More information about X.Org can be found at:
+ <URL:https://www.X.org>
+ .
+ This module can be found at
+ git://anongit.freedesktop.org/git/xorg/lib/libXrender
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+
+Package: libxtst6
+Source: libxtst
+Version: 2:1.2.3-1build4
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 48
+Depends: libc6 (>= 2.4), libx11-6 (>= 2:1.6.0), libxext6, x11-common
+Multi-Arch: same
+Priority: optional
+Section: libs
+Filename: pool/main/libx/libxtst/libxtst6_1.2.3-1build4_amd64.deb
+Size: 13438
+SHA256: afeb7cfbb413fa9a326a0afd34da9250aaf2ba56219b69fe8a15bcf86d86fa23
+SHA1: bbce32e18b0ca23d47da785e88dec6a1859abc13
+MD5sum: b500a22dc27562d02efbb1ce1936dd10
+Description: X11 Testing -- Record extension library
+ libXtst provides an X Window System client interface to the Record
+ extension to the X protocol.
+ .
+ The Record extension allows X clients to synthesise input events, which
+ is useful for automated testing.
+ .
+ More information about X.Org can be found at:
+ <URL:https://www.X.org>
+ .
+ This module can be found at
+ git://anongit.freedesktop.org/git/xorg/lib/libXtst
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+
 Package: minecraft-launcher
 Version: 1.1.26
 Architecture: amd64
@@ -60,4 +653,1275 @@ Homepage: https://minecraft.net/
 Pre-Depends: dpkg (>= 1.14.0), wget | curl, ca-certificates
 Depends: default-jre, libasound2 (>= 1.0.23), libatk-bridge2.0-0 (>= 2.5.3), libatk1.0-0 (>= 2.2.0), libatspi2.0-0 (>= 2.9.90), libc6 (>= 2.16), libcairo2 (>= 1.6.0), libcups2 (>= 1.4.0), libdbus-1-3 (>= 1.5.12), libdrm2 (>= 2.4.38), libexpat1 (>= 2.0.1), libgbm1 (>= 8.1~0), libfontconfig1 (>= 2.8.0), libgcc1 (>= 1:4.1.1), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.39.4), libgtk-3-0 (>= 3.18.9), libnspr4 (>= 2:4.9-2~), libnss3 (>= 2:3.22), libpango1.0-0 (>= 1.14.0) | libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libstdc++6 (>= 4.8.0), libx11-6 (>= 2:1.4.99.1), libxcomposite1 (>= 1:0.3-1), libxcursor1 (>> 1.1.2), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxi6 (>= 2:1.2.99.4), libxrandr2 (>= 2:1.2.99.3), libxrender1, libxss1, libxtst6, libx11-xcb1, libxcb-dri3-0, libxcb1 (>= 1.9.2), libbz2-1.0, lsb-base (>= 4.1), xdg-utils (>= 1.0.2), wget, libcurl3 | libcurl4, libuuid1
 Copyright: All rights reserved
+
+Package: x11-common
+Source: xorg
+Version: 1:7.7+23ubuntu2
+Architecture: all
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Installed-Size: 311
+Depends: lsb-base (>= 1.3-9ubuntu2)
+Multi-Arch: foreign
+Homepage: https://www.x.org/
+Priority: optional
+Section: x11
+Filename: pool/main/x/xorg/x11-common_7.7+23ubuntu2_all.deb
+Size: 23380
+SHA256: c0a20d0b7ba899f00d22b6f18e49a336aace0514f9ef7f3858c1ab689011c559
+SHA1: 171e4d24132a5e84ba8d078200da7f1264e273c0
+MD5sum: e8b18affc0b8ac86199caa84a9ba963c
+Description: X Window System (X.Org) infrastructure
+ x11-common contains the filesystem infrastructure required for further
+ installation of the X Window System in any configuration; it does not
+ provide a full installation of clients, servers, libraries, and utilities
+ required to run the X Window System.
+ .
+ A number of terms are used to refer to the X Window System, including "X",
+ "X Version 11", "X11", "X11R6", and "X11R7".  The version of X used in
+ Debian is derived from the version released by the X.Org Foundation, and
+ is thus often also referred to as "X.Org".  All of the preceding quoted
+ terms are functionally interchangeable in an Debian system.
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+
+Package: zulu11-ca-doc
+Source: zulu11-ca
+Version: 11.0.17-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 1354
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu11-ca/zulu11-ca-doc_11.0.17-1_amd64.deb
+Size: 232908
+SHA256: 3834c0c88661df2aa5ad54d8d0f2cc90dff0d442f210bbb3dd2d9c9d8bfeb214
+SHA1: ae63a7b6f7af74ab002ef17932555cf013299ede
+MD5sum: 680ec6ec4d3f2170979908b68e1d89d1
+Description: Azul Zulu 11.60+19 (11.0.17-b8) CA JDK documentation
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu11-ca-jdk
+Source: zulu11-ca
+Version: 11.0.17-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 84
+Depends: libc6 (>= 2.2.5), zlib1g (>= 1:1.1.4), zulu11-ca-jre (= 11.0.17-1), zulu11-ca-jdk-headless (= 11.0.17-1), zulu11-ca-doc (= 11.0.17-1)
+Provides: java-compiler, java-sdk, java10-sdk, java11-sdk, java2-sdk, java5-sdk, java6-sdk, java7-sdk, java8-sdk, java9-sdk
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu11-ca/zulu11-ca-jdk_11.0.17-1_amd64.deb
+Size: 11288
+SHA256: c1fd0f0e9d621d612e8e09d3263f9dcfed0053a0b86df877a86c826ee94daccf
+SHA1: 407e3611dfbb517c7ceacfe87fa70b8a827eacd1
+MD5sum: b47829286f612a68028ed3ab8d46f88c
+Description: Azul Zulu 11.60+19 (11.0.17-b8) CA JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu11-ca-jdk-headless
+Source: zulu11-ca
+Version: 11.0.17-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 85947
+Depends: libc6 (>= 2.4), zlib1g (>= 1:1.1.4), zulu11-ca-jre-headless (= 11.0.17-1)
+Provides: java-sdk-headless, java10-sdk-headless, java11-sdk-headless, java2-sdk-headless, java5-sdk-headless, java6-sdk-headless, java7-sdk-headless, java8-sdk-headless, java9-sdk-headless
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu11-ca/zulu11-ca-jdk-headless_11.0.17-1_amd64.deb
+Size: 78370508
+SHA256: 121b9acd5861c4eecbf250f878dc8e45d23214d46ab341ca060eb50f7b255020
+SHA1: c31dadf9e6271ea398dd8e064a1af97c4a80910d
+MD5sum: bef66afc53d798fd861f414bb0765617
+Description: Azul Zulu 11.60+19 (11.0.17-b8) CA Headless JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu11-ca-jre
+Source: zulu11-ca
+Version: 11.0.17-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 970
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.4), libx11-6, libxext6, libxi6, libxrender1, libxtst6, zlib1g (>= 1:1.1.4), zulu11-ca-jre-headless (= 11.0.17-1)
+Provides: java-runtime, java10-runtime, java11-runtime, java2-runtime, java5-runtime, java6-runtime, java7-runtime, java8-runtime, java9-runtime
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu11-ca/zulu11-ca-jre_11.0.17-1_amd64.deb
+Size: 325870
+SHA256: 648798cb817341aa8983e83588e51fb3c0bc5eedfb38cb86d5ff3ef714e5347a
+SHA1: b2db89323ca04ccb887fb11acb58981e7ba926ee
+MD5sum: 0111e65bd982afcf1d90a35c43a786e6
+Description: Azul Zulu 11.60+19 (11.0.17-b8) CA JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu11-ca-jre-headless
+Source: zulu11-ca
+Version: 11.0.17-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 171456
+Depends: libc6 (>= 2.7), zlib1g (>= 1:1.2.2), java-common, libfontconfig1
+Provides: java-runtime-headless, java10-runtime-headless, java11-runtime-headless, java2-runtime-headless, java5-runtime-headless, java6-runtime-headless, java7-runtime-headless, java8-runtime-headless, java9-runtime-headless
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu11-ca/zulu11-ca-jre-headless_11.0.17-1_amd64.deb
+Size: 35812056
+SHA256: a9ad7f94a1475b163dd5946c1529a862b04b7f2887b0967d3e549dae3f053bc8
+SHA1: fa37aaf4154a5f6b848aa1c51f81b371df67af77
+MD5sum: 9b63d53818503d9c07eee8af6545175b
+Description: Azul Zulu 11.60+19 (11.0.17-b8) CA Headless JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu13-ca-doc
+Source: zulu13-ca
+Version: 13.0.13-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 803
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu13-ca/zulu13-ca-doc_13.0.13-1_amd64.deb
+Size: 148796
+SHA256: 33f893334e7fd257b063025485eaf9c2e6f8bd50497718d65ea375dac8382774
+SHA1: 3794f5ff8aad1d216e9bc1501dd1ec1fd2b42629
+MD5sum: 1bac35c37a7b9019ffda792d276180df
+Description: Azul Zulu 13.52+15 (13.0.13-b5) CA JDK documentation
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu13-ca-jdk
+Source: zulu13-ca
+Version: 13.0.13-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 84
+Depends: libc6 (>= 2.2.5), zlib1g (>= 1:1.1.4), zulu13-ca-jre (= 13.0.13-1), zulu13-ca-jdk-headless (= 13.0.13-1), zulu13-ca-doc (= 13.0.13-1)
+Provides: java-compiler, java-sdk, java10-sdk, java11-sdk, java12-sdk, java13-sdk, java2-sdk, java5-sdk, java6-sdk, java7-sdk, java8-sdk, java9-sdk
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu13-ca/zulu13-ca-jdk_13.0.13-1_amd64.deb
+Size: 11338
+SHA256: 1489bab2d42c3774a650abca43e75d28f4990b88fe08ddfc0c295ac3f405c69c
+SHA1: 3176c5992d9b54d498752de3cde5d09532fc8228
+MD5sum: 16945ec9c93fe57f787d710e1dea9b54
+Description: Azul Zulu 13.52+15 (13.0.13-b5) CA JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu13-ca-jdk-headless
+Source: zulu13-ca
+Version: 13.0.13-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 90588
+Depends: libc6 (>= 2.4), zlib1g (>= 1:1.1.4), zulu13-ca-jre-headless (= 13.0.13-1)
+Provides: java-sdk-headless, java10-sdk-headless, java11-sdk-headless, java12-sdk-headless, java13-sdk-headless, java2-sdk-headless, java5-sdk-headless, java6-sdk-headless, java7-sdk-headless, java8-sdk-headless, java9-sdk-headless
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu13-ca/zulu13-ca-jdk-headless_13.0.13-1_amd64.deb
+Size: 82397854
+SHA256: a93df14f23e5c00dc45007ae375f62d8d1048ab5967c5d49ed5803b552dd98f6
+SHA1: eabb8ff07536384ab62e3120061861b14cf5a1db
+MD5sum: 423d91098be363cfc66fc5a9887e1a2d
+Description: Azul Zulu 13.52+15 (13.0.13-b5) CA Headless JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu13-ca-jre
+Source: zulu13-ca
+Version: 13.0.13-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 970
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.4), libx11-6, libxext6, libxi6, libxrender1, libxtst6, zlib1g (>= 1:1.1.4), zulu13-ca-jre-headless (= 13.0.13-1)
+Provides: java-runtime, java10-runtime, java11-runtime, java12-runtime, java13-runtime, java2-runtime, java5-runtime, java6-runtime, java7-runtime, java8-runtime, java9-runtime
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu13-ca/zulu13-ca-jre_13.0.13-1_amd64.deb
+Size: 325508
+SHA256: e9cc394b9bf459d1ad62f66921b5addb80294bcd5c3a55a806b92c4f96ee075f
+SHA1: 7c6b4950b179e1dfec80d0477b32cbc53bcb4d9b
+MD5sum: 71860858924b93fb96faebb1fcc61cca
+Description: Azul Zulu 13.52+15 (13.0.13-b5) CA JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu13-ca-jre-headless
+Source: zulu13-ca
+Version: 13.0.13-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 184674
+Depends: libc6 (>= 2.7), zlib1g (>= 1:1.1.4), java-common, libfontconfig1
+Provides: java-runtime-headless, java10-runtime-headless, java11-runtime-headless, java12-runtime-headless, java13-runtime-headless, java2-runtime-headless, java5-runtime-headless, java6-runtime-headless, java7-runtime-headless, java8-runtime-headless, java9-runtime-headless
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu13-ca/zulu13-ca-jre-headless_13.0.13-1_amd64.deb
+Size: 39707986
+SHA256: 9a8afdc1a89a9815f8b4cfb64d0a03b31d5cf749f88efab13eeefc1b3330236e
+SHA1: 3f2d1680c53d55b1e66c961d0d3c4cb67a993f95
+MD5sum: 9be33d03e3977369f29882cf58e9850e
+Description: Azul Zulu 13.52+15 (13.0.13-b5) CA Headless JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu15-ca-doc
+Source: zulu15-ca
+Version: 15.0.9-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 795
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu15-ca/zulu15-ca-doc_15.0.9-1_amd64.deb
+Size: 147414
+SHA256: a12b7d16db9e9f7a010afb443cf2ae2c7d6fae795480bb8493152d1671222018
+SHA1: d613811cb7601b6606e1f7f99de89010066961b8
+MD5sum: 9a1bdb741844fda6c4fb261bbdbaa2ff
+Description: Azul Zulu 15.44+13 (15.0.9-b5) CA JDK documentation
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu15-ca-jdk
+Source: zulu15-ca
+Version: 15.0.9-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 84
+Depends: libc6 (>= 2.2.5), zlib1g (>= 1:1.1.4), zulu15-ca-jre (= 15.0.9-1), zulu15-ca-jdk-headless (= 15.0.9-1), zulu15-ca-doc (= 15.0.9-1)
+Provides: java-compiler, java-sdk, java10-sdk, java11-sdk, java12-sdk, java13-sdk, java14-sdk, java15-sdk, java2-sdk, java5-sdk, java6-sdk, java7-sdk, java8-sdk, java9-sdk
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu15-ca/zulu15-ca-jdk_15.0.9-1_amd64.deb
+Size: 11326
+SHA256: 7e5b44de9cbc3eba68e6cbacdfea947c57eb7b7c171c1de1465ff41fbd933b26
+SHA1: 396f686a038331d64563340f71b1e09ac075b89d
+MD5sum: 9a493a0e738dd0ce76430cc475ac69b3
+Description: Azul Zulu 15.44+13 (15.0.9-b5) CA JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu15-ca-jdk-headless
+Source: zulu15-ca
+Version: 15.0.9-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 89317
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1), zlib1g (>= 1:1.1.4), zulu15-ca-jre-headless (= 15.0.9-1)
+Provides: java-sdk-headless, java10-sdk-headless, java11-sdk-headless, java12-sdk-headless, java13-sdk-headless, java14-sdk-headless, java15-sdk-headless, java2-sdk-headless, java5-sdk-headless, java6-sdk-headless, java7-sdk-headless, java8-sdk-headless, java9-sdk-headless
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu15-ca/zulu15-ca-jdk-headless_15.0.9-1_amd64.deb
+Size: 80774576
+SHA256: 0aaca6218b782bc197e61c9b561a75dfa3787120380e5aab04602e76b8dfe966
+SHA1: 283fdd34ed58eb169af37e35ed4c0174d6f8c38c
+MD5sum: 24d35b48568326ce5325178ad76823c9
+Description: Azul Zulu 15.44+13 (15.0.9-b5) CA Headless JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu15-ca-jre
+Source: zulu15-ca
+Version: 15.0.9-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 956
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.4), libx11-6, libxext6, libxi6, libxrender1, libxtst6, zlib1g (>= 1:1.1.4), zulu15-ca-jre-headless (= 15.0.9-1)
+Provides: java-runtime, java10-runtime, java11-runtime, java12-runtime, java13-runtime, java14-runtime, java15-runtime, java2-runtime, java5-runtime, java6-runtime, java7-runtime, java8-runtime, java9-runtime
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu15-ca/zulu15-ca-jre_15.0.9-1_amd64.deb
+Size: 319874
+SHA256: 07d761ae07fd232d97aa3f0ab80709eed4cf732c8ee19ff625bb56bb0f3ccba9
+SHA1: 623e8b5ce868162af849251efe44f1eeb604c3d4
+MD5sum: 308de78ea02a98062eab068799c27899
+Description: Azul Zulu 15.44+13 (15.0.9-b5) CA JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu15-ca-jre-headless
+Source: zulu15-ca
+Version: 15.0.9-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 191629
+Depends: libc6 (>= 2.9), zlib1g (>= 1:1.2.2), java-common, libfontconfig1
+Provides: java-runtime-headless, java10-runtime-headless, java11-runtime-headless, java12-runtime-headless, java13-runtime-headless, java14-runtime-headless, java15-runtime-headless, java2-runtime-headless, java5-runtime-headless, java6-runtime-headless, java7-runtime-headless, java8-runtime-headless, java9-runtime-headless
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu15-ca/zulu15-ca-jre-headless_15.0.9-1_amd64.deb
+Size: 41136962
+SHA256: 8f3a21ef4323cfffd4a52afa1522ed2cb9fe99abf3f8c51cbd663ba8f0b76f81
+SHA1: b725ba2805d98dbf4951c3d6da5c53765ca86bbd
+MD5sum: a381246c6c376975835b6bda12659758
+Description: Azul Zulu 15.44+13 (15.0.9-b5) CA Headless JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu16-ca-doc
+Source: zulu16-ca
+Version: 16.0.2-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 798
+Homepage: http://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu16-ca/zulu16-ca-doc_16.0.2-1_amd64.deb
+Size: 147590
+SHA256: b27447b81ea3c91156aca31709eb2f98b3a6a64d212261cf324c5a6f91934bf7
+SHA1: dd69224bc1a02dcf96988947836fe153fae55cb6
+MD5sum: 639186b12f925734b80de1d3c4686f05
+Description: Azul Zulu 16.32+15 (16.0.2-b7) CA JDK documentation
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ http://www.azul.com/products/core/.
+
+Package: zulu16-ca-jdk
+Source: zulu16-ca
+Version: 16.0.2-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 84
+Depends: libc6 (>= 2.2.5), zlib1g (>= 1:1.1.4), zulu16-ca-jre (= 16.0.2-1), zulu16-ca-jdk-headless (= 16.0.2-1), zulu16-ca-doc (= 16.0.2-1)
+Provides: java-compiler, java-sdk, java10-sdk, java11-sdk, java12-sdk, java13-sdk, java14-sdk, java15-sdk, java16-sdk, java2-sdk, java5-sdk, java6-sdk, java7-sdk, java8-sdk, java9-sdk
+Homepage: http://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu16-ca/zulu16-ca-jdk_16.0.2-1_amd64.deb
+Size: 11306
+SHA256: a3ad0812c8af6c91e9852129e16fb2a526738e6466bb72b1f36dc49865bbcd31
+SHA1: 6829453b4c9f11fdf6fc06e1f3e51c0514782133
+MD5sum: f7d010395057013cd40c918085a6f01b
+Description: Azul Zulu 16.32+15 (16.0.2-b7) CA JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ http://www.azul.com/products/core/.
+
+Package: zulu16-ca-jdk-headless
+Source: zulu16-ca
+Version: 16.0.2-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 92093
+Depends: libc6 (>= 2.4), zlib1g (>= 1:1.1.4), zulu16-ca-jre-headless (= 16.0.2-1)
+Provides: java-sdk-headless, java10-sdk-headless, java11-sdk-headless, java12-sdk-headless, java13-sdk-headless, java14-sdk-headless, java15-sdk-headless, java16-sdk-headless, java2-sdk-headless, java5-sdk-headless, java6-sdk-headless, java7-sdk-headless, java8-sdk-headless, java9-sdk-headless
+Homepage: http://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu16-ca/zulu16-ca-jdk-headless_16.0.2-1_amd64.deb
+Size: 83272310
+SHA256: 3804f8a95a5ee9d57fb02a9612a48d320cb5505a82b4311cac04b0bc887af26c
+SHA1: 178a8a8a22a919857b441e6ac917ab13cbe012e0
+MD5sum: 647eb9209bb737273c434256cf1df5ae
+Description: Azul Zulu 16.32+15 (16.0.2-b7) CA Headless JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ http://www.azul.com/products/core/.
+
+Package: zulu16-ca-jre
+Source: zulu16-ca
+Version: 16.0.2-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 953
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.4), libx11-6, libxext6, libxi6, libxrender1, libxtst6, zlib1g (>= 1:1.1.4), zulu16-ca-jre-headless (= 16.0.2-1)
+Provides: java-runtime, java10-runtime, java11-runtime, java12-runtime, java13-runtime, java14-runtime, java15-runtime, java16-runtime, java2-runtime, java5-runtime, java6-runtime, java7-runtime, java8-runtime, java9-runtime
+Homepage: http://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu16-ca/zulu16-ca-jre_16.0.2-1_amd64.deb
+Size: 323812
+SHA256: c640ecf81ec18a7d54989849856a0d98b21caf77eba96d55c9b46fdf58b93087
+SHA1: 790e64a496b0007ce0d8191161cd21749b3bd338
+MD5sum: 3b2994a936a2ee5a8fa9a850a852d6fc
+Description: Azul Zulu 16.32+15 (16.0.2-b7) CA JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ http://www.azul.com/products/core/.
+
+Package: zulu16-ca-jre-headless
+Source: zulu16-ca
+Version: 16.0.2-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 199447
+Depends: libc6 (>= 2.9), zlib1g (>= 1:1.2.2), java-common, libfontconfig1
+Provides: java-runtime-headless, java10-runtime-headless, java11-runtime-headless, java12-runtime-headless, java13-runtime-headless, java14-runtime-headless, java15-runtime-headless, java16-runtime-headless, java2-runtime-headless, java5-runtime-headless, java6-runtime-headless, java7-runtime-headless, java8-runtime-headless, java9-runtime-headless
+Homepage: http://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu16-ca/zulu16-ca-jre-headless_16.0.2-1_amd64.deb
+Size: 42160448
+SHA256: d3a7a4fc77a34f52dbeede2c51adaebe290f826d61af2553b03fbaa18f427b66
+SHA1: 69e43893ba73c85d57708407260d569286a0c275
+MD5sum: 6bd581f16d1a09dae86abc64e68bfed4
+Description: Azul Zulu 16.32+15 (16.0.2-b7) CA Headless JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ http://www.azul.com/products/core/.
+
+Package: zulu17-ca-doc
+Source: zulu17-ca
+Version: 17.0.5-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 772
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu17-ca/zulu17-ca-doc_17.0.5-1_amd64.deb
+Size: 143136
+SHA256: fe19d0d0ecae4ad957908b274996c4d1fedcb2f8b281dc503f87d9cc27eb4810
+SHA1: e2adaabe81d64e9ca6899f93e814741dff376fdf
+MD5sum: 4325d5be7ae9bb0ad7cf00813950b630
+Description: Azul Zulu 17.38+21 (17.0.5-b8) CA JDK documentation
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu17-ca-jdk
+Source: zulu17-ca
+Version: 17.0.5-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 84
+Depends: libc6 (>= 2.2.5), zlib1g (>= 1:1.1.4), zulu17-ca-jre (= 17.0.5-1), zulu17-ca-jdk-headless (= 17.0.5-1), zulu17-ca-doc (= 17.0.5-1)
+Provides: java-compiler, java-sdk, java10-sdk, java11-sdk, java12-sdk, java13-sdk, java14-sdk, java15-sdk, java16-sdk, java17-sdk, java2-sdk, java5-sdk, java6-sdk, java7-sdk, java8-sdk, java9-sdk
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu17-ca/zulu17-ca-jdk_17.0.5-1_amd64.deb
+Size: 11326
+SHA256: 62b4cdb7dbe1d9456a3f3f406b1064bd30408e47bf0f6a19018eddae820d5023
+SHA1: ee7dee37b944250c89e59b28d09b55abaacf5d6a
+MD5sum: 84332d634751c43a45eaeb5f1a0fa922
+Description: Azul Zulu 17.38+21 (17.0.5-b8) CA JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu17-ca-jdk-headless
+Source: zulu17-ca
+Version: 17.0.5-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 86797
+Depends: libc6 (>= 2.4), zlib1g (>= 1:1.1.4), zulu17-ca-jre-headless (= 17.0.5-1)
+Provides: java-sdk-headless, java10-sdk-headless, java11-sdk-headless, java12-sdk-headless, java13-sdk-headless, java14-sdk-headless, java15-sdk-headless, java16-sdk-headless, java17-sdk-headless, java2-sdk-headless, java5-sdk-headless, java6-sdk-headless, java7-sdk-headless, java8-sdk-headless, java9-sdk-headless
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu17-ca/zulu17-ca-jdk-headless_17.0.5-1_amd64.deb
+Size: 77897380
+SHA256: 03a2e7bbe5fdbabf2a77f7560a8977b034ea52a07a315e43adc89a9afecb547c
+SHA1: 1b6bd91af7377fe299f63d45503718c43d2c0691
+MD5sum: a0580680a1598be317c1fc3213047a5d
+Description: Azul Zulu 17.38+21 (17.0.5-b8) CA Headless JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu17-ca-jre
+Source: zulu17-ca
+Version: 17.0.5-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 946
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.4), libx11-6, libxext6, libxi6, libxrender1, libxtst6, zlib1g (>= 1:1.1.4), zulu17-ca-jre-headless (= 17.0.5-1)
+Provides: java-runtime, java10-runtime, java11-runtime, java12-runtime, java13-runtime, java14-runtime, java15-runtime, java16-runtime, java17-runtime, java2-runtime, java5-runtime, java6-runtime, java7-runtime, java8-runtime, java9-runtime
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu17-ca/zulu17-ca-jre_17.0.5-1_amd64.deb
+Size: 319072
+SHA256: 0053ce1b5cd3d1a1a79422a6ee5ec16de8e1fec316f520df8d95f8aab900b3a5
+SHA1: 753178aa3a4ba4109450ebd8e94579203ed0c4d1
+MD5sum: 8c4ea8e9662faa7e39b6baf512dd617b
+Description: Azul Zulu 17.38+21 (17.0.5-b8) CA JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu17-ca-jre-headless
+Source: zulu17-ca
+Version: 17.0.5-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 185646
+Depends: libc6 (>= 2.9), zlib1g (>= 1:1.2.2), java-common, libfontconfig1
+Provides: java-runtime-headless, java10-runtime-headless, java11-runtime-headless, java12-runtime-headless, java13-runtime-headless, java14-runtime-headless, java15-runtime-headless, java16-runtime-headless, java17-runtime-headless, java2-runtime-headless, java5-runtime-headless, java6-runtime-headless, java7-runtime-headless, java8-runtime-headless, java9-runtime-headless
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu17-ca/zulu17-ca-jre-headless_17.0.5-1_amd64.deb
+Size: 39924642
+SHA256: 65bdec9dfee8ea2d2cb47e441e62ca4808870aa82e9d7f6100288f06b9d68796
+SHA1: ec0fe8b4df9cfe8861aff9d8669732fcab6d7bec
+MD5sum: 2120b83c5ed469997a456df0cab6f3c5
+Description: Azul Zulu 17.38+21 (17.0.5-b8) CA Headless JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu18-ca-doc
+Source: zulu18-ca
+Version: 18.0.2.1-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 802
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu18-ca/zulu18-ca-doc_18.0.2.1-1_amd64.deb
+Size: 149126
+SHA256: 2a46c13a8bd773575ec4f6b9ff3dfbc07770617b05016d3bb47be5d50c2cc6d5
+SHA1: c0d800abf511329b518b1069652d7255d600a9f1
+MD5sum: bced7ec20b97413dbace2a3222c18d71
+Description: Azul Zulu 18.32+13 (18.0.2.1-b1) CA JDK documentation
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu18-ca-jdk
+Source: zulu18-ca
+Version: 18.0.2.1-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 84
+Depends: libc6 (>= 2.2.5), zlib1g (>= 1:1.1.4), zulu18-ca-jre (= 18.0.2.1-1), zulu18-ca-jdk-headless (= 18.0.2.1-1), zulu18-ca-doc (= 18.0.2.1-1)
+Provides: java-compiler, java-sdk, java10-sdk, java11-sdk, java12-sdk, java13-sdk, java14-sdk, java15-sdk, java16-sdk, java17-sdk, java18-sdk, java2-sdk, java5-sdk, java6-sdk, java7-sdk, java8-sdk, java9-sdk
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu18-ca/zulu18-ca-jdk_18.0.2.1-1_amd64.deb
+Size: 11328
+SHA256: 7718ab65e4c1248bf089ac32c7031353f238adf88f4503b3b2480b690c51dcb9
+SHA1: f5f22798f8e0f1750eddb12b29b18b76a4baf9ba
+MD5sum: 6efa8d27abcd0e25dd6c14d95f98a86b
+Description: Azul Zulu 18.32+13 (18.0.2.1-b1) CA JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu18-ca-jdk-headless
+Source: zulu18-ca
+Version: 18.0.2.1-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 87592
+Depends: libc6 (>= 2.4), zlib1g (>= 1:1.1.4), zulu18-ca-jre-headless (= 18.0.2.1-1)
+Provides: java-sdk-headless, java10-sdk-headless, java11-sdk-headless, java12-sdk-headless, java13-sdk-headless, java14-sdk-headless, java15-sdk-headless, java16-sdk-headless, java17-sdk-headless, java18-sdk-headless, java2-sdk-headless, java5-sdk-headless, java6-sdk-headless, java7-sdk-headless, java8-sdk-headless, java9-sdk-headless
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu18-ca/zulu18-ca-jdk-headless_18.0.2.1-1_amd64.deb
+Size: 78165302
+SHA256: 77e1eb6013b7283e337b9464b1580c6c183ceb92009523be3f3abf368e35a17d
+SHA1: 94d7adf33921730ee25069f5a1f42b108620645b
+MD5sum: 2dcfd6a04aa0c5fff4b4cea8d7dd412e
+Description: Azul Zulu 18.32+13 (18.0.2.1-b1) CA Headless JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu18-ca-jre
+Source: zulu18-ca
+Version: 18.0.2.1-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 946
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.4), libx11-6, libxext6, libxi6, libxrender1, libxtst6, zlib1g (>= 1:1.1.4), zulu18-ca-jre-headless (= 18.0.2.1-1)
+Provides: java-runtime, java10-runtime, java11-runtime, java12-runtime, java13-runtime, java14-runtime, java15-runtime, java16-runtime, java17-runtime, java18-runtime, java2-runtime, java5-runtime, java6-runtime, java7-runtime, java8-runtime, java9-runtime
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu18-ca/zulu18-ca-jre_18.0.2.1-1_amd64.deb
+Size: 317754
+SHA256: 890f18fc77b310e270408db2374c4bd3e5cf36d902ff3b4512695e767a115770
+SHA1: b8101d182d477eaf3615ed93238b9a3d2199c104
+MD5sum: a039bae4239a0a807e437b2fe7795f5e
+Description: Azul Zulu 18.32+13 (18.0.2.1-b1) CA JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu18-ca-jre-headless
+Source: zulu18-ca
+Version: 18.0.2.1-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 184723
+Depends: libc6 (>= 2.9), zlib1g (>= 1:1.2.2), java-common, libfontconfig1
+Provides: java-runtime-headless, java10-runtime-headless, java11-runtime-headless, java12-runtime-headless, java13-runtime-headless, java14-runtime-headless, java15-runtime-headless, java16-runtime-headless, java17-runtime-headless, java18-runtime-headless, java2-runtime-headless, java5-runtime-headless, java6-runtime-headless, java7-runtime-headless, java8-runtime-headless, java9-runtime-headless
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu18-ca/zulu18-ca-jre-headless_18.0.2.1-1_amd64.deb
+Size: 39558868
+SHA256: 44f2841afff53e2e6ace212ef0eeac403b7a6bbeedc78c6defbb13934036ca08
+SHA1: 28fc3a08518d5810203d8b5ec7ba3c42eeb81961
+MD5sum: 0b81c229019f5948a2590f09e223c861
+Description: Azul Zulu 18.32+13 (18.0.2.1-b1) CA Headless JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu19-ca-doc
+Source: zulu19-ca
+Version: 19.0.1-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 807
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu19-ca/zulu19-ca-doc_19.0.1-1_amd64.deb
+Size: 150194
+SHA256: 0ab0f2f27ed6c007c3bdd56ed21d8c2281b5a7301380305639d1499b13a2294a
+SHA1: 5d1f2e002a92544ffe418d5ac413035bf70ab047
+MD5sum: dfc2e1a6707406e6704fc5a75b08cbd0
+Description: Azul Zulu 19.30+11 (19.0.1-b10) CA JDK documentation
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu19-ca-jdk
+Source: zulu19-ca
+Version: 19.0.1-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 83
+Depends: libc6 (>= 2.2.5), zlib1g (>= 1:1.1.4), zulu19-ca-jre (= 19.0.1-1), zulu19-ca-jdk-headless (= 19.0.1-1), zulu19-ca-doc (= 19.0.1-1)
+Provides: java-compiler, java-sdk, java10-sdk, java11-sdk, java12-sdk, java13-sdk, java14-sdk, java15-sdk, java16-sdk, java17-sdk, java18-sdk, java19-sdk, java2-sdk, java5-sdk, java6-sdk, java7-sdk, java8-sdk, java9-sdk
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu19-ca/zulu19-ca-jdk_19.0.1-1_amd64.deb
+Size: 11236
+SHA256: 1f350fe8ac8216f3233e0fd57452ee1127f443a2468b0840d65b792e04f1454b
+SHA1: 61f4c9a8b9eac3ee6080fc9c3caa3eac7eac206b
+MD5sum: 64f011e113095cb07e3aca318f55891a
+Description: Azul Zulu 19.30+11 (19.0.1-b10) CA JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu19-ca-jdk-headless
+Source: zulu19-ca
+Version: 19.0.1-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 91094
+Depends: libc6 (>= 2.4), zlib1g (>= 1:1.1.4), zulu19-ca-jre-headless (= 19.0.1-1)
+Provides: java-sdk-headless, java10-sdk-headless, java11-sdk-headless, java12-sdk-headless, java13-sdk-headless, java14-sdk-headless, java15-sdk-headless, java16-sdk-headless, java17-sdk-headless, java18-sdk-headless, java19-sdk-headless, java2-sdk-headless, java5-sdk-headless, java6-sdk-headless, java7-sdk-headless, java8-sdk-headless, java9-sdk-headless
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu19-ca/zulu19-ca-jdk-headless_19.0.1-1_amd64.deb
+Size: 81144080
+SHA256: 3b5bca03ece1ffa49e8c4cb7df33ed61fc1e9f7f20e43b3ad041d114007a74b0
+SHA1: 50b330ac463f94817a4f8caac3f3a1c5cc0f63bf
+MD5sum: 9a8eae8b36832303ad8014a48aa767b3
+Description: Azul Zulu 19.30+11 (19.0.1-b10) CA Headless JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu19-ca-jre
+Source: zulu19-ca
+Version: 19.0.1-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 966
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.4), libx11-6, libxext6, libxi6, libxrender1, libxtst6, zlib1g (>= 1:1.1.4), zulu19-ca-jre-headless (= 19.0.1-1)
+Provides: java-runtime, java10-runtime, java11-runtime, java12-runtime, java13-runtime, java14-runtime, java15-runtime, java16-runtime, java17-runtime, java18-runtime, java19-runtime, java2-runtime, java5-runtime, java6-runtime, java7-runtime, java8-runtime, java9-runtime
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu19-ca/zulu19-ca-jre_19.0.1-1_amd64.deb
+Size: 323518
+SHA256: b27ec3745c63955bfeadf5b31d0a09c9d6205c275055004ec29b5fe887300c52
+SHA1: 9a865abfb6fdb189a5605b58a878ac1fef42cad3
+MD5sum: 636234bd22fd9a4eb0d39b08bee6ff29
+Description: Azul Zulu 19.30+11 (19.0.1-b10) CA JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu19-ca-jre-headless
+Source: zulu19-ca
+Version: 19.0.1-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 195215
+Depends: libc6 (>= 2.9), zlib1g (>= 1:1.2.2), java-common, libfontconfig1
+Provides: java-runtime-headless, java10-runtime-headless, java11-runtime-headless, java12-runtime-headless, java13-runtime-headless, java14-runtime-headless, java15-runtime-headless, java16-runtime-headless, java17-runtime-headless, java18-runtime-headless, java19-runtime-headless, java2-runtime-headless, java5-runtime-headless, java6-runtime-headless, java7-runtime-headless, java8-runtime-headless, java9-runtime-headless
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu19-ca/zulu19-ca-jre-headless_19.0.1-1_amd64.deb
+Size: 41435160
+SHA256: 6d38fda95645b6b35e8564bf1e961b62941c92d344d4235bd2fd589906496f68
+SHA1: ed380be192fdc1d920fd2eb5674c7e48c5da0e19
+MD5sum: 49a4d04c9a9dc6aca8591252cde608b0
+Description: Azul Zulu 19.30+11 (19.0.1-b10) CA Headless JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu7-ca-doc
+Source: zulu7-ca
+Version: 7.0.352-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 1660
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu7-ca/zulu7-ca-doc_7.0.352-1_amd64.deb
+Size: 250820
+SHA256: c329c638c08da01962823755cd8197d93b7d247c54465a1917008250e4dd65c7
+SHA1: be452b03788740352e437fb39dc71a854ae93703
+MD5sum: 8a88adf6ce60acd218d1939fc996f66c
+Description: Azul Zulu 7.56.0.11 (7u352-b01) CA JDK documentation
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu7-ca-jdk
+Source: zulu7-ca
+Version: 7.0.352-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 486
+Depends: libc6 (>= 2.2.5), libx11-6, zulu7-ca-jre (= 7.0.352-1), zulu7-ca-jdk-headless (= 7.0.352-1), zulu7-ca-doc (= 7.0.352-1)
+Provides: java-compiler, java-sdk, java2-sdk, java5-sdk, java6-sdk, java7-sdk
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu7-ca/zulu7-ca-jdk_7.0.352-1_amd64.deb
+Size: 371732
+SHA256: aa566204232bba7f7a6ddea77c7ccce4506ccaf4a602033148ef18123fe37650
+SHA1: a1898161f3f9a76e94dae4f84ec97c373e0e9243
+MD5sum: b6ab7bdad1ac7c081d891a08eee89f8a
+Description: Azul Zulu 7.56.0.11 (7u352-b01) CA JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu7-ca-jdk-headless
+Source: zulu7-ca
+Version: 7.0.352-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 34151
+Depends: libc6 (>= 2.4), zulu7-ca-jre-headless (= 7.0.352-1)
+Provides: java-sdk-headless, java2-sdk-headless, java5-sdk-headless, java6-sdk-headless, java7-sdk-headless
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu7-ca/zulu7-ca-jdk-headless_7.0.352-1_amd64.deb
+Size: 7510188
+SHA256: 4e697582c3410be6f68fc03761f4daeb81eaa78b25006b860fbee90dcc48b1f5
+SHA1: a9b846d9a0b287e8b02be2cf730b5b39634cd3c2
+MD5sum: 4e80133961cc6cdf9653f2d00ed243c0
+Description: Azul Zulu 7.56.0.11 (7u352-b01) CA Headless JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu7-ca-jre
+Source: zulu7-ca
+Version: 7.0.352-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 1030
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.4), libx11-6, libxext6, libxi6, libxrender1, libxtst6, zulu7-ca-jre-headless (= 7.0.352-1)
+Provides: java-runtime, java2-runtime, java5-runtime, java6-runtime, java7-runtime
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu7-ca/zulu7-ca-jre_7.0.352-1_amd64.deb
+Size: 348320
+SHA256: fade6c6facab2faff22cc01cc2e7cbee5edde3d162b54590ac0736bc3e36ce5e
+SHA1: 908467b2feab2d1814a5d9bc8c5916146efecce8
+MD5sum: 72fd0101f2a724bfa05e049817e3c520
+Description: Azul Zulu 7.56.0.11 (7u352-b01) CA JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu7-ca-jre-headless
+Source: zulu7-ca
+Version: 7.0.352-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 89658
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), java-common, libfontconfig1
+Provides: java-runtime-headless, java2-runtime-headless, java5-runtime-headless, java6-runtime-headless, java7-runtime-headless
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu7-ca/zulu7-ca-jre-headless_7.0.352-1_amd64.deb
+Size: 21108532
+SHA256: cb19090c965cbce974d50f37866dedfe9484439857f58022794b07b18b9c5bc5
+SHA1: df48d6102a30bfca56c6b3c706cde711e5d8301b
+MD5sum: e2e5971a9bdc7f9e30b67affa6c87990
+Description: Azul Zulu 7.56.0.11 (7u352-b01) CA Headless JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu8-ca-doc
+Source: zulu8-ca
+Version: 8.0.352-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 1804
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu8-ca/zulu8-ca-doc_8.0.352-1_amd64.deb
+Size: 271568
+SHA256: d139d34f04fc4d56ecaed9ebb019c2f0c447b5d8cb3565f3b888eda5d680cd0e
+SHA1: 7bec765fbc34d3d185f93e0c97bb2365834a07f0
+MD5sum: d4c31c0cea36e8aec1edfaac2b91c221
+Description: Azul Zulu 8.66.0.15 (8u352-b08) CA JDK documentation
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu8-ca-jdk
+Source: zulu8-ca
+Version: 8.0.352-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 522
+Depends: libc6 (>= 2.2.5), libx11-6, zulu8-ca-jre (= 8.0.352-1), zulu8-ca-jdk-headless (= 8.0.352-1), zulu8-ca-doc (= 8.0.352-1)
+Provides: java-compiler, java-sdk, java2-sdk, java5-sdk, java6-sdk, java7-sdk, java8-sdk
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu8-ca/zulu8-ca-jdk_8.0.352-1_amd64.deb
+Size: 383072
+SHA256: 43c32649310809ff89672264ba0c555ed36e60093028c35b69528add430a3061
+SHA1: 48559988446b3e5e1b80fbb8811869103491b1a3
+MD5sum: 6e5888c733cdaa7616271a548261f963
+Description: Azul Zulu 8.66.0.15 (8u352-b08) CA JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu8-ca-jdk-headless
+Source: zulu8-ca
+Version: 8.0.352-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 38368
+Depends: libc6 (>= 2.4), zulu8-ca-jre-headless (= 8.0.352-1)
+Provides: java-sdk-headless, java2-sdk-headless, java5-sdk-headless, java6-sdk-headless, java7-sdk-headless, java8-sdk-headless
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu8-ca/zulu8-ca-jdk-headless_8.0.352-1_amd64.deb
+Size: 7941998
+SHA256: a81f32540cc35b128ad754cea578fcf284a6dcdb649e0cc9aee64bb69e8388ad
+SHA1: 22a1a60d0d0a2a0403269ebe97f7fbbf3df52fcc
+MD5sum: 66cecc8f72945af3f4a8e88edccb868d
+Description: Azul Zulu 8.66.0.15 (8u352-b08) CA Headless JDK
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu8-ca-jre
+Source: zulu8-ca
+Version: 8.0.352-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 1069
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.4), libx11-6, libxext6, libxi6, libxrender1, libxtst6, zulu8-ca-jre-headless (= 8.0.352-1)
+Provides: java-runtime, java2-runtime, java5-runtime, java6-runtime, java7-runtime, java8-runtime
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu8-ca/zulu8-ca-jre_8.0.352-1_amd64.deb
+Size: 360786
+SHA256: 8c4f11a58a562b598c59b06c8aa42d83a1eb8f378cff07a58bbfae65a3dc7b65
+SHA1: 47648e5ba93e68771b0461c416f5a9f44b7f083f
+MD5sum: 5d867de76611a764d33ce54d817b7d9c
+Description: Azul Zulu 8.66.0.15 (8u352-b08) CA JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
+
+Package: zulu8-ca-jre-headless
+Source: zulu8-ca
+Version: 8.0.352-1
+Architecture: amd64
+Maintainer: Azul Systems, Inc. <azul_openjdk@azulsystems.com>
+Installed-Size: 108202
+Depends: libc6 (>= 2.4), java-common, libfontconfig1
+Provides: java-runtime-headless, java2-runtime-headless, java5-runtime-headless, java6-runtime-headless, java7-runtime-headless, java8-runtime-headless
+Homepage: https://www.azul.com/products/core/
+Priority: extra
+Section: java
+Filename: pool/main/z/zulu8-ca/zulu8-ca-jre-headless_8.0.352-1_amd64.deb
+Size: 30844196
+SHA256: c69f95698d191642d756647d34ae2fd5b53d07b305ad96c1f45c472f908a6b7f
+SHA1: c5a34dcf5eda488e0b79b6af046bc3a0a9c43ad2
+MD5sum: 5f73e96bb07448a4dfe9f8f71837ab7e
+Description: Azul Zulu 8.66.0.15 (8u352-b08) CA Headless JRE
+ Azul Zulu Builds of OpenJDK are 100% open source Java Development Kits (JDKs)
+ delivered by Azul Platform Core. Azul Zulu can be deployed across various
+ operating systems, Docker containers, hypervisors, and Cloud platforms. It is
+ available in TGZ, ZIP, APK, RPM, Debian package types, including Linux
+ repository access via yum, apk, and apt-get.
+ Azul Zulu is a compliant implementation of the Java SE specification, verified
+ with the OpenJDK Community Technology Compatibility Kit (TCK).
+ To see details about Azul Platform Core, Azul Zulu Builds of OpenJDK, review
+ user documentation, and check for downloads, visit
+ https://www.azul.com/products/core/.
 
