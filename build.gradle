@@ -7,8 +7,8 @@ group = 'de.MarkusTieger.tiger-os'
 archivesBaseName = 'repository'
 version = '1.0.0'
 
-sourceCompatibility = 16
-targetCompatibility = 16
+sourceCompatibility = 17
+targetCompatibility = 17
 
 repositories {
     mavenCentral() 
