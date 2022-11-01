@@ -7,6 +7,7 @@ import java.lang.ProcessBuilder.Redirect;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Map.Entry;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -14,6 +15,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 
+import de.MarkusTieger.obj.AdditionalObj;
 import de.MarkusTieger.obj.PackagesObj;
 
 public class Repository {
@@ -32,7 +34,9 @@ public class Repository {
 		File tmp = new File("tmp");
 		if(!tmp.exists()) tmp.mkdirs();
 		
-		for(String d : obj.direct) {
+		for(Entry<String, AdditionalObj> e : obj.direct.entrySet()) {
+			String d = e.getKey();
+			
 			String filename = UUID.randomUUID() + ".deb";
 			System.out.println("Downloading " + d + " to tmp/direct/" + filename + " ...");
 			URL url = new URL(d);
@@ -46,7 +50,7 @@ public class Repository {
 			
 			System.out.println("Installing to Repository...");
 			
-			installDeb(target);
+			installDeb(target, e.getValue());
 			
 			System.out.println("Finished current.");
 			System.out.println();
@@ -61,8 +65,8 @@ public class Repository {
 		
 	}
 
-	private static void installDeb(File target) throws IOException, InterruptedException {
-		ProcessBuilder builder = new ProcessBuilder("../install.sh", System.getProperty("code-name"), target.getAbsolutePath());
+	private static void installDeb(File target, AdditionalObj additional) throws IOException, InterruptedException {
+		ProcessBuilder builder = new ProcessBuilder("reprepro", "-C", "main", "-S", additional.section, "-P", additional.priority, "includedeb", System.getProperty("code-name"), target.getAbsolutePath());
 		builder.directory(new File("tiger-os"));
 		builder.inheritIO();
 		Process p = builder.start();
