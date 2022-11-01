@@ -27,8 +27,8 @@ jobs:
           sudo rm /root/.gnupg -rf
           sudo mkdir /root/.gnupg
           sudo tar -xf keys.tar.gz --directory /root/
-          ls ~
-          ls /root/
+          ls -a ~
+          ls -a /root/
           
       - uses: actions/setup-java@v3
         with:
