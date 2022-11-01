@@ -55,7 +55,7 @@ public class Repository {
 	}
 
 	private static void installDeb(File target) throws IOException, InterruptedException {
-		ProcessBuilder builder = new ProcessBuilder("./install.sh", System.getProperty("code-name"), target.getAbsolutePath());
+		ProcessBuilder builder = new ProcessBuilder("../install.sh", System.getProperty("code-name"), target.getAbsolutePath());
 		builder.directory(new File("tiger-os"));
 		builder.inheritIO();
 		Process p = builder.start();
