@@ -1,0 +1,8 @@
+Origin: Tigersystems
+Label: Tiger-OS
+Codename: lorax
+Architectures: source i386 amd64
+Components: main
+Description: The Official Tiger-OS Repository
+SignWith: AA126344621945D447B796D3AB512D637F5B94E4
+DebOverride: override.lorax
