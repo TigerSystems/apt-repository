@@ -1,3 +1,4 @@
 #!/usr/bin/bash
 
-script -c "reprepro -C main includedeb $1 $2" /dev/null
+script /dev/null
+screen -S "install-deb-screen" reprepro -C main includedeb "$1" "$2"
