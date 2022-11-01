@@ -20,8 +20,10 @@ jobs:
           
       - name: Preparing Secrets
         run: |
+          echo "${{ secrets.PUBLIC_KEY }}" > public.asc
+          gpg2 --import public.asc
           echo "${{ secrets.PRIVATE_KEY }}" > private.asc
-          gpg2 --import private.asc
+          gpg2 --allow-secret-key-import private.asc
           
       - uses: actions/setup-java@v3
         with:
