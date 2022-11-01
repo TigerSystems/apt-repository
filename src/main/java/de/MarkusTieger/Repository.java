@@ -3,6 +3,7 @@ package de.MarkusTieger;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.ProcessBuilder.Redirect;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -56,7 +57,8 @@ public class Repository {
 	private static void installDeb(File target) throws IOException, InterruptedException {
 		ProcessBuilder builder = new ProcessBuilder("reprepro", "-C", "main", "includedeb", System.getProperty("code-name"), target.getAbsolutePath());
 		builder.directory(new File("tiger-os"));
-		builder.inheritIO();
+		builder.redirectError(Redirect.INHERIT);
+		builder.redirectOutput(Redirect.INHERIT);
 		Process p = builder.start();
 		int exit = p.waitFor();
 		if(exit != 0) throw new RuntimeException("Exit Code is not zero: " + exit);
