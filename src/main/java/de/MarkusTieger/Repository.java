@@ -1,18 +1,24 @@
 package de.MarkusTieger;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.Map.Entry;
+import java.util.Properties;
+import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.zip.GZIPInputStream;
 
 import javax.tools.FileObject;
 
@@ -96,7 +102,7 @@ public class Repository {
 		command.add("/usr/bin/docker");
 		command.add("run");
 		command.add(image);*/
-		command.add("apt-get");
+		command.add("nala");
 		command.add("install");
 		command.add("-y");
 		command.add("--download-only");
@@ -111,10 +117,9 @@ public class Repository {
 
 				LABEL maintainer="markustieger@gmail.com"
 
-				RUN apt-get update && apt-get upgrade -y && apt-get install -y software-properties-common && rm -rf /var/lib/apt/lists/*
+				RUN apt update && apt upgrade -y && apt install -y software-properties-common nala && rm -rf /var/lib/apt/lists/*
 				
-				RUN rm -rf /var/cache/apt/archives
-				RUN mkdir /var/cache/apt/archives
+				
 				
 				""";
 		
@@ -137,7 +142,35 @@ public class Repository {
 			dockerfile += "RUN add-apt-repository \"" + repo + "\"\n";
 		}
 		
-		dockerfile += "RUN apt-get update\n";
+		dockerfile += "RUN nala update\n";
+		
+		
+		/*System.out.println("Installing Packages...");
+		
+		dockerfile += "RUN ";
+		for(String cmd : command) {
+			if(cmd.equalsIgnoreCase("--download-only")) continue;
+			dockerfile += cmd;
+			dockerfile += " ";
+		}
+		dockerfile = dockerfile.substring(0, dockerfile.length() - 1);
+		dockerfile += "\n";
+		
+		
+		System.out.println("Removing Packages...");
+		
+		dockerfile += "RUN ";
+		for(String cmd : command) {
+			if(cmd.equalsIgnoreCase("--download-only")) continue;
+			if(cmd.equalsIgnoreCase("install")) cmd = "remove";
+			dockerfile += cmd;
+			dockerfile += " ";
+		}
+		dockerfile = dockerfile.substring(0, dockerfile.length() - 1);
+		dockerfile += "\n";
+		
+		dockerfile += "RUN rm -rf /var/cache/apt/archives\n"
+				   + "RUN mkdir /var/cache/apt/archives\n";*/
 		
 		System.out.println("Downloading Packages...");
 		
@@ -217,6 +250,177 @@ public class Repository {
 			System.out.println();
 		}
 		
+		System.out.println("Indexing Packages...");
+		
+		System.out.println("Reading Local-Repository...");
+		
+		File list = new File("tiger-os/dists/lorax/main/binary-amd64/Packages");
+		List<Properties> l = new ArrayList<>();
+		try (Scanner x = new Scanner(list)) {
+			Properties prop = null;
+			while(x.hasNextLine()) {
+				String line = x.nextLine();
+				if(line.startsWith(" ")) continue;
+				if(line.isEmpty()) {
+					if(prop != null) l.add(prop);
+					prop = null;
+					continue;
+				}
+				if(prop == null) {
+					prop = new Properties();
+				}
+				String[] arg = line.split(":", 2);
+				if(arg.length != 2) {
+					System.out.println("Ignoring Line: " + line + " Args: " + arg.length + " ( " + Arrays.toString(arg) + " )");
+					continue;
+				}
+				if(arg[1].startsWith(" ")) arg[1] = arg[1].substring(1);
+				prop.setProperty(arg[0], arg[1]);
+			}
+			if(prop != null) l.add(prop);
+		}
+		
+		System.out.println("Finding Known Repositories...");
+		
+		List<String> knownRepos = new ArrayList<>();
+		
+		for(String arch : List.of("amd64", "i386")) {
+			
+			knownRepos.add("http://packages.linuxmint.com/dists/vanessa/main/binary-" + arch + "/Packages");
+			
+			for(String ubuntu_repo : List.of("http://archive.ubuntu.com/ubuntu/", "http://security.ubuntu.com/ubuntu/")) {
+				for(String distro : List.of("jammy", "jammy-updates", "jammy-backports")) {
+					for(String component : List.of("main", "restricted", "universe", "multiverse")) {
+						String url = ubuntu_repo + "dists/" + distro + "/" + component + "/binary-" + arch + "/Packages.gz";
+						knownRepos.add(url);
+					}
+				}
+			}
+		}
+		
+		List<String> already_exists = new ArrayList<>();
+		List<String> inRepo = new ArrayList<>();
+		
+		System.out.println("Indexing Local-Repository...");
+		
+		for(Properties prop : l) {
+			if(prop.getProperty("Package") == null) continue;
+			inRepo.add(prop.getProperty("Package"));
+		}
+		l.clear();
+		
+		System.out.println("Downloading Known-Repositories...");
+		
+		List<File> packageFiles = new ArrayList<>();
+		
+		File packagesListDir = new File(tmp, "packages");
+		if(!packagesListDir.exists()) packagesListDir.mkdirs();
+		
+		int len;
+		byte[] buffer = new byte[1024];
+		
+		for(String repo : knownRepos) {
+			
+			System.out.println("Repository: " + repo);
+			
+			boolean gz = repo.endsWith(".gz");
+			URL url = new URL(repo);
+			
+			HttpURLConnection con = (HttpURLConnection) url.openConnection();
+			con.setRequestProperty("User-Agent", "Tiger-OS Repository Synchronizer");
+			InputStream in = con.getInputStream();
+			File f = new File(packagesListDir, UUID.randomUUID() + (gz ? ".gz" : ""));
+			if(!f.exists()) f.createNewFile();
+			
+			try (FileOutputStream fos = new FileOutputStream(f)) {
+				while((len = in.read(buffer)) > 0) {
+					fos.write(buffer, 0, len);
+					fos.flush();
+				}
+			}
+			
+			packageFiles.add(f);
+			
+		}
+		
+		System.out.println("Reading Known-Repositories...");
+		
+		int pos = 0;
+		for(File f : packageFiles) {
+			pos++;
+			
+			System.out.println(pos + " / " + knownRepos.size());
+			
+			boolean gz = f.getName().toLowerCase().endsWith(".gz");
+			
+			InputStream in = new FileInputStream(f);
+			if(gz) {
+				in = new GZIPInputStream(in);
+			}
+			try (Scanner x = new Scanner(in)) {
+				Properties prop = null;
+				while(x.hasNextLine()) {
+					String line = x.nextLine();
+					if(line.startsWith(" ")) continue;
+					if(line.isEmpty()) {
+						if(prop != null) l.add(prop);
+						prop = null;
+						continue;
+					}
+					if(prop == null) {
+						prop = new Properties();
+					}
+					String[] arg = line.split(":", 2);
+					if(arg.length != 2) {
+						System.out.println("Ignoring Line: " + line + " Args: " + arg.length + " ( " + Arrays.toString(arg) + " )");
+						continue;
+					}
+					if(arg[1].startsWith(" ")) arg[1] = arg[1].substring(1);
+					prop.setProperty(arg[0], arg[1]);
+				}
+				if(prop != null) l.add(prop);
+			}
+		}
+		
+		System.out.println("Indexing Known-Repositories...");
+		
+		for(Properties prop : l) {
+			if(prop.getProperty("Package") == null) continue;
+			already_exists.add(prop.getProperty("Package"));
+		}
+		
+		System.out.println("Finding Duplicates Packages...");
+		
+		List<String> remove = new ArrayList<>();
+		
+		for(String pack : inRepo) {
+			if(already_exists.contains(pack)) {
+				System.out.println("Removing: " + pack);
+				remove.add(pack);
+			}
+		}
+		
+		System.out.println();
+		System.out.println("Removing Packages...");
+		System.out.println();
+		
+		for(String rm : remove) {
+			
+			System.out.println("Removing: " + rm);
+			
+			builder = new ProcessBuilder("reprepro", "-C", "main", "remove", System.getProperty("code-name"), rm);
+			builder.directory(new File("tiger-os"));
+			builder.inheritIO();
+			p = builder.start();
+			exit = p.waitFor();
+			if(exit != 0) throw new RuntimeException("Exit Code is not zero: " + exit);
+			
+			System.out.println("Finish current.");
+			System.out.println();
+			
+		}
+		
+		
 		
 		/*builder = new ProcessBuilder("rm", "-rf", tmp.getAbsolutePath());
 		builder.inheritIO();
@@ -224,6 +428,8 @@ public class Repository {
 		exit = p.waitFor();
 		if(exit != 0) throw new RuntimeException("Exit Code is not zero: " + exit);
 		if(tmp.exists()) throw new RuntimeException("Temp. Folder does exists.");*/
+		
+		System.out.println("Finish.");
 		
 	}
 
