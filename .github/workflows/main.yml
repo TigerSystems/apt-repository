@@ -26,7 +26,13 @@ jobs:
           chmod +x gradlew
           sudo ./gradlew run --args='lorax'
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          folder: tiger-os
+          # Upload entire repository
+          path: 'tiger-os'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
