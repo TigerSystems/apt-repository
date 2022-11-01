@@ -10,6 +10,11 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
         
+      - name: Preparing Secrets
+        run: |
+          echo "${{ secrets.PUBLIC_KEY }}" > public.key
+          gpg --import public.key
+        
       - name: Preparing APT
         run: |
           sudo apt update
